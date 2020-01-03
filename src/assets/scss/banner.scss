@@ -17,6 +17,9 @@
   margin: 0 auto;
   max-width: 920px;
   color: white;
+  @media screen and (min-width: $xl) {
+    padding-top: 20%;
+  }
 
 
   h1 {

@@ -1,0 +1,110 @@
+@import "break-points";
+
+.works {
+  @media screen and(min-width: $sm) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.workItem {
+  width: 320px;
+  height: 350px;
+  overflow: hidden;
+  position: relative; /* ? */
+  cursor: pointer;
+  @media screen and(min-width: $sm) {
+    display: flex;
+    flex-wrap: wrap;
+    width: 25%;
+  }
+}
+
+.work {
+  height: 100%;
+  width: 100%;
+  transition: all .5s;
+
+  h5, p {
+    opacity: 0;
+    color: white;
+    margin: auto;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    transition: all .5s;
+  }
+
+  h5 {
+    top: 35%;
+    font-weight: 700;
+  }
+
+  p {
+    top: 65%;
+  }
+}
+
+.work:before {
+  content: "";
+  display: none;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(232, 69, 69, 0.75);
+
+}
+
+.workItem:hover .work:before {
+  display: block;
+
+}
+
+.workItem:hover .work {
+  transform: scale(1.15);
+}
+
+.workItem:hover h5 {
+  opacity: 1;
+  top: 47%;
+}
+
+.workItem:hover p {
+  opacity: 1;
+  top: 52%;
+}
+
+.bgOne {
+  background-image: url('../images/work-1.jpg');
+}
+
+.bgTwo {
+  background-image: url('../images/work-2.jpg');
+}
+
+.bgThree {
+  background-image: url('../images/work-3.jpg');
+}
+
+.bgFour {
+  background-image: url('../images/work-4.jpg');
+}
+
+.bgFive {
+  background-image: url('../images/work-5.jpg');
+}
+
+.bgSix {
+  background-image: url('../images/work-6.jpg');
+}
+
+.bgSeven {
+  background-image: url('../images/work-7.jpg');
+}
+
+.bgEight {
+  background-image: url('../images/work-8.jpg');
+}
