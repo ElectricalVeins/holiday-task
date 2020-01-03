@@ -1,6 +1,9 @@
+@import "break-points";
+
 .banner {
   background-image: url("../images/banner.jpg");
   background-size: cover;
+  background-position: center top;
   min-height: 750px;
   max-height: 750px;
 }
@@ -10,7 +13,7 @@
   text-align: center;
   flex-direction: column;
   align-items: center;
-  padding-top: 20%;
+  padding-top: 50%; /* steps here till 20% on xl*/
   margin: 0 auto;
   max-width: 920px;
   color: white;
@@ -21,16 +24,24 @@
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
     text-transform: uppercase;
-    font-size: 65px;
+    font-size: 32px;
     line-height: 1.1;
+
+    @media screen and (min-width: $md) {
+      font-size: 42px;
+    }
+    @media screen and (min-width: $lg) {
+      font-size: 65px;
+    }
   }
 
   p {
     font-family: 'Raleway', sans-serif;
     font-weight: 300;
-    font-size: 22px;
+    font-size: 18px; /*22*/
     line-height: 1.5;
     margin-bottom: 80px;
+
   }
 
   a {
@@ -48,4 +59,7 @@
   a:hover {
     cursor: pointer;
   }
+
+
 }
+

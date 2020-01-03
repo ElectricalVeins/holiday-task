@@ -1,0 +1,40 @@
+
+.featureContainer {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 14px;
+  justify-content: center;
+  padding: 100px 0;
+
+}
+
+.featureIcon {
+  height: 60px;
+  object-fit: none;
+}
+
+.featureCard {
+  display: flex;
+  flex-direction: column;
+  max-width: 360px;
+  margin-bottom: 50px;
+  padding: 0 15px;
+
+  h5 {
+    align-self: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #2d3033;
+    line-height: 1.1;
+    margin: 40px 0 10px;
+  }
+
+  p {
+    padding: 0 15px;
+    text-align: center;
+    color: rgb(108, 114, 121);
+    line-height: 1.6;
+  }
+}
+
+
