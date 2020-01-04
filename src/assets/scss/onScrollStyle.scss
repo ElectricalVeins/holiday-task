@@ -1,0 +1,14 @@
+@import "break-points";
+
+.pageOnScroll {
+  background-color: rgb(41, 44, 71);
+
+  nav {
+    padding: 25px 0 5px 0;
+    border: none;
+    @media screen and(min-width: $lg) {
+      padding: 25px 0;
+    }
+  }
+}
+

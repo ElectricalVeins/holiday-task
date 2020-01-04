@@ -1,0 +1,67 @@
+@import 'break-points';
+@import 'popUpNav';
+@import "burgerButtonMenu";
+
+.headerWrapper {
+  position: fixed;
+  width: 100%;
+  z-index: 900;
+
+}
+
+.contentContainer {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  transition: padding 0.3s;
+  padding: 40px 0 20px 0;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  @media screen and(min-width: $lg) {
+    padding: 40px 0;
+    max-width: 1170px;
+    width: 100%;
+  }
+}
+
+.logoImage {
+  height: 24px;
+  width: 189px;
+}
+
+.navigation {
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.75);
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  font-size: 13px;
+  font-weight: 700;
+
+  li {
+    margin-left: 40px;
+    cursor: pointer;
+  }
+
+  @media screen and(max-width: $lg) {
+    display: none;
+  }
+}
+
+.navigationSecond {
+  display: block;
+  position: relative;
+  top: -10px;
+  background-color: #E84545;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  z-index: 10000;
+
+  @media screen and (min-width: $lg) {
+    display: none;
+  }
+}
+
+

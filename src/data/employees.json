@@ -1,38 +1,42 @@
 [
   {
-    "name": "Test",
+    "name": "Ruth Wood",
     "contacts": [
       "test",
       "test",
       "facebook/sdfsdf"
     ],
-    "profilePicture": "./assets/images/team-2.jpg"
+    "profilePicture": "./assets/images/team-1.jpg",
+    "profileInfo": "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam quis risus eget urna mollis ornare vel eu leo."
   },
   {
-    "name": "Test",
+    "name": "Timothy Reed",
     "contacts": [
       "test",
       "test",
       "facebook/sdfsdf"
     ],
-    "profilePicture": "./assets/images/team-2.jpg"
+    "profilePicture": "./assets/images/team-2.jpg",
+    "profileInfo": "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam quis risus eget urna mollis ornare vel eu leo."
   },
   {
-    "name": "Test",
+    "name": "Victoria Valdez",
     "contacts": [
       "test",
       "test",
       "facebook/sdfsdf"
     ],
-    "profilePicture": "./assets/images/team-2.jpg"
+    "profilePicture": "./assets/images/team-3.jpg",
+    "profileInfo": "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam quis risus eget urna mollis ornare vel eu leo."
   },
   {
-    "name": "Test",
+    "name": "Beverly Little",
     "contacts": [
       "test",
       "test",
       "facebook/sdfsdf"
     ],
-    "profilePicture": "./assets/images/team-2.jpg"
+    "profilePicture": "./assets/images/team-4.jpg",
+    "profileInfo": "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam quis risus eget urna mollis ornare vel eu leo."
   }
 ]

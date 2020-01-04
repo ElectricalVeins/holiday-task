@@ -10,13 +10,31 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
 </head>
 <body>
-<header>
-    <nav></nav>
+
+<header class="headerWrapper" id="headerWrapper">
+    <nav class="contentContainer" id="headerContentContainer">            <!--нужен ли тут ид ? +-->
+        <a href="#banner"><img src="./assets/images/logo@2x.png" alt="Logo" class="logoImage"></a>
+        <ul class="navigation" id="navigationList">
+            <li><a href="#features">features</a></li>
+            <li><a href="#works">works</a></li>
+            <li><a href="#employees">our team</a></li>
+            <li><a href="#">testimonials</a></li>
+            <li><a href="#">download</a></li>
+        </ul>
+        <div class="navigationSecond" id="menuBtn">
+            <div class="menuBtn">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+        </div>
+    </nav>
 </header>
 
+
 <main>
-    <!---------------------BANNER----------------------------->
-    <section class="banner">
+    <!---------------------BANNER------------------------------>
+    <section class="banner" id="banner">
         <div class="container">
             <div class="bannerInfo">
                 <h1>your favorite one page multi purpose template</h1>
@@ -27,7 +45,7 @@
         </div>
     </section>
     <!------------------Features------------------------------->
-    <section class="features">
+    <section class="features" id="features">
         <div class="container featureContainer">
             <div class="featureCard">
                 <img class="featureIcon" src="./assets/images/icons/01.png" alt="icon">
@@ -69,8 +87,8 @@
 
         </div>
     </section>
-    <!------------------WORKS------------------------------->
-    <section class="works">
+    <!------------------WORKS---------------------------------->
+    <section class="works" id="works">
 
         <div class="workItem">
             <div class="work bgOne">
@@ -136,11 +154,24 @@
         </div>
 
 
+    </section>                                  <!--Сделать белые бордеры между фотами-->
+    <!------------------Employees---------------------------------->
+    <section class="employees" id="employees">
+        <div class="container">
+
+        </div>
+    </section>
+    <!------------------Slider---------------------------------->
+    <section>
+
+    </section>
+    <!------------------Download---------------------------------->
+    <section>
+
     </section>
 
-
 </main>
-
+<!------------------Footer---------------------------------->
 <footer id="pageFooter">
     <div class="footerTop">
         <div class="container footerContainer">
