@@ -1,4 +1,4 @@
-.popUpNavigationWrapper {
+.popUpNavigation {
   background-color: rgba(1, 1, 1, .9);
   position: fixed;
   top: 0;
@@ -7,18 +7,13 @@
   height: 100%;
   min-width: 100vw;
   min-height: 100vh;
-  z-index: 100;
+
+  z-index: 101;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.popUpNavigation {
-  position: relative;
-  z-index: 101;
-  display: flex;
-  align-items: center;
   flex-direction: column;
+
 }
 
 .popUpNavItem {

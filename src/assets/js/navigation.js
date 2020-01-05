@@ -3,7 +3,6 @@
 const anchors = document.querySelectorAll('a[href*="#"]');
 const burgerButton = document.getElementById('menuBtn');
 const headerElem = document.getElementById('headerWrapper');
-const navElem = document.createElement('div');
 const ulElem = document.getElementById('navigationList');
 const liElem = document.querySelectorAll('body>header>nav>ul>li');
 const scrollButton = document.querySelectorAll('li');
@@ -46,7 +45,6 @@ function burgerButtonStyleChange() {
 }
 
 function extNavStyleToggler() {
-  navElem.classList.toggle('popUpNavigationWrapper');
   ulElem.classList.toggle('navigation');
   ulElem.classList.toggle('popUpNavigation');
 
@@ -58,8 +56,6 @@ function onclickNavigationToggle() {
   liElem.forEach((li) => {
     li.classList.toggle('popUpNavItem');
   });
-  // navElem.removeChild(ulElem);
-  document.body.removeChild(navElem);
 }
 
 function buttonFunction() {
@@ -75,9 +71,5 @@ function buttonFunction() {
     };
 
   });
-
-  navElem.appendChild(ulElem);
-  document.body.appendChild(navElem);
-
 
 }
