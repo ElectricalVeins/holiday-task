@@ -6,7 +6,6 @@ const headerElem = document.getElementById('headerWrapper');
 const ulElem = document.getElementById('navigationList');
 const liElem = document.querySelectorAll('body>header>nav>ul>li');
 const scrollButton = document.querySelectorAll('li');
-
 burgerButton.onclick = () => {
   burgerButtonStyleChange();
   buttonFunction();
@@ -15,14 +14,16 @@ burgerButton.onclick = () => {
 scrollButton.onclick = smoothScroll();
 
 //For the header onscroll style change
-document.onscroll = () => {
+document.onscroll = scrollNavStyle;
+document.onload = scrollNavStyle;
 
+function scrollNavStyle() {
   if (window.scrollY > 51) {
     headerElem.classList.add('pageOnScroll');
   } else {
     headerElem.classList.remove('pageOnScroll');
   }
-};
+}
 
 //For the navigation smooth scrolling
 function smoothScroll() {

@@ -1,0 +1,106 @@
+@import "break-points";
+
+.cardsDisplacement {
+
+  padding-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.growFixParent {
+  display: flex;
+  flex-direction: column;
+}
+
+.growFixChild {
+  flex: 1;
+}
+
+.employee {
+
+  margin: 50px auto;
+  max-width: 270px;
+  text-align: center;
+  line-height: 1.1;
+
+  img {
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+  }
+
+  h4 {
+
+    font-size: 22px;
+    color: #2d3033;
+    margin: 20px 0 10px 0;
+  }
+
+  h5 {
+    color: #e84545;
+    font-size: 13px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #6c7279;
+    @media screen and (min-width: $md) {
+      margin: 0 auto;
+      width: 85%;
+    }
+
+    @media screen and (min-width: $lg) {
+      width: 100%;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 100%;
+    }
+
+  }
+
+  @media screen and (min-width: $md) {
+    max-width: 49%;
+    display: inline-block;
+    padding: 0 15px;
+
+  }
+
+  @media screen and (min-width: $lg) {
+    max-width: 24.5%;
+    text-align: left;
+  }
+}
+
+.shareLinks {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-evenly;
+
+  li {
+
+  }
+
+  a {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    border: 1px solid #e8ecee;
+    border-radius: 2px;
+    color: #c6cacc;
+    font-size: 18px;
+    line-height: 40px;
+    width: 40px;
+    height: 40px;
+
+  }
+
+  a:hover, a:focus {
+    background-color: #e84545;
+    border-color: #e84545;
+    color: #fff;
+  }
+}

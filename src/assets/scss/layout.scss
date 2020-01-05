@@ -1,6 +1,21 @@
+@import "break-points";
+
 .container {
   max-width: 1170px;
   width: 100%;
   padding: 0 15px;
   margin: 0 auto;
+
+  @media (min-width: 1200px) {
+    max-width: 1170px;
+  }
+  @media (max-width: 1200px) {
+    max-width: 970px;
+  }
+
+  @media screen and (max-width: $lg) {
+    max-width: 750px;
+  }
+
+
 }
