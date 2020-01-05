@@ -1,0 +1,87 @@
+@import "break-points";
+
+.slideshow-container {
+  display: flex;
+  flex-direction: column;
+  background: #53354a;
+  @media screen and(min-width: $lg) {
+    flex-direction: row;
+  }
+}
+
+.sliderImageContainer {
+  width: auto;
+  @media screen and(min-width: $lg) {
+    width: 50%;
+  }
+}
+
+.sliderInfoContainer {
+  width: auto;
+  @media screen and(min-width: $lg) {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+#sliderImage {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+
+}
+
+.text {
+  color: #fff;
+
+}
+
+.textMain {
+  font: italic 26px "Cardo", 'Georgia', "Times New Roman", serif;
+  padding: 20px 5% 40px;
+  @media screen and(min-width: $lg) {
+    font-size: 36px;
+    padding: 0 15% 2.5%;
+  }
+}
+
+.textQuote {
+  font-family: 'Raleway', sans-serif;
+  padding: 0 5%;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.4;
+  @media screen and(min-width: $lg) {
+    margin-left: 10%;
+    align-self: flex-start;
+  }
+}
+
+.dot {
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 0 5px;
+  background-color: #717171;
+  border-radius: 50%;
+  display: inline-block;
+  transition: all 0.6s ease-out;
+
+}
+
+.activeDot, .dot:hover {
+  background-color: #bbb;
+}
+
+.dots {
+  padding: 40px 0 20px 0;
+  text-align: center;
+  @media screen and(min-width: $lg) {
+    padding-top: 15vh;
+  }
+}
+
+

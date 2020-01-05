@@ -41,7 +41,7 @@ function EmployeeElemCreator(teamItem) {
 
   employeeLinks.appendChild(linkListCreator(teamItem.contacts));
   employeeElem.appendChild(employeeLinks);
-  console.log(employeeElem);
+
   return employeeElem;
 
 }
