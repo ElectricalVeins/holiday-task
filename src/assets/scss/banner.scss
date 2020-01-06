@@ -13,16 +13,21 @@
   text-align: center;
   flex-direction: column;
   align-items: center;
-  padding-top: 50%; /* steps here till 20% on xl*/
-  padding-left: 15px; /* steps here ?*/
-  padding-right: 15px; /* steps here ?*/
+  padding-top: 45%;
+  padding-left: 15px;
+  padding-right: 15px;
   margin: 0 auto;
   max-width: 920px;
   color: white;
-  @media screen and (min-width: $lg) {
+  @media screen and (min-width: $md) {
+    padding-top: 25%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  @media screen and (min-width: 1200px) {
     padding-top: 20%;
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
 

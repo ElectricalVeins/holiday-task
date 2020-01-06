@@ -1,6 +1,6 @@
 @import "break-points";
 
-.works {
+#works {
   @media screen and(min-width: $sm) {
     display: flex;
     flex-wrap: wrap;
@@ -8,19 +8,23 @@
 }
 
 .workItem {
-  width: 320px;
+  width: 100%;
   height: 350px;
   overflow: hidden;
   position: relative; /* ? */
   cursor: pointer;
-  @media screen and(min-width: $sm) {
+  @media screen and(min-width: $md) {
     display: flex;
     flex-wrap: wrap;
+    width: 50%;
+  }
+  @media screen and(min-width: 1200px) {
     width: 25%;
   }
 }
 
 .work {
+  background-repeat: no-repeat;
   height: 100%;
   width: 100%;
   transition: all .5s;
