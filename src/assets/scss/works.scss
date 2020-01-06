@@ -24,10 +24,13 @@
 }
 
 .work {
-  background-repeat: no-repeat;
   height: 100%;
   width: 100%;
   transition: all .5s;
+
+  img {
+    object-fit: cover;
+  }
 
   h5, p {
     opacity: 0;
