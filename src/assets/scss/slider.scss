@@ -10,10 +10,15 @@
 }
 
 .sliderImageContainer {
+  display: none;
   width: auto;
   @media screen and(min-width: $lg) {
     width: 50%;
   }
+}
+
+.activeSlide {
+  display: block;
 }
 
 .sliderInfoContainer {
