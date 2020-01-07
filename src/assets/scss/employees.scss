@@ -9,16 +9,12 @@
 }
 
 .growFixParent {
-  display: flex;
-  flex-direction: column;
-}
-
-.growFixChild {
   flex: 1;
 }
 
 .employee {
-
+  display: flex;
+  flex-direction: column;
   margin: 50px auto;
   max-width: 270px;
   text-align: center;
@@ -64,7 +60,6 @@
 
   @media screen and (min-width: $md) {
     max-width: 49%;
-    display: inline-block;
     padding: 0 15px;
 
   }
