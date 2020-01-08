@@ -6,6 +6,9 @@ const headerElem = document.getElementById('headerWrapper');
 const ulElem = document.getElementById('navigationList');
 const liElem = document.querySelectorAll('body>header>nav>ul>li');
 const scrollButton = document.querySelectorAll('li');
+const downloadBttnElem = document.getElementById('downloadBttn');
+
+
 burgerButton.onclick = () => {
   burgerButtonStyleChange();
   buttonFunction();
@@ -14,8 +17,13 @@ burgerButton.onclick = () => {
 scrollButton.onclick = smoothScroll();
 
 //For the header onscroll style change
-document.onscroll = scrollNavStyle;
-document.onload = scrollNavStyle;
+document.onscroll = eventListeners;
+document.onload = eventListeners;
+
+function eventListeners() {
+  scrollNavStyle();
+  downloadButtonAnimation();
+}
 
 function scrollNavStyle() {
   if (window.scrollY > 51) {
@@ -32,6 +40,7 @@ function smoothScroll() {
     anchor.addEventListener('click', function(e) {
       e.preventDefault();
       const blockID = anchor.getAttribute('href').substr(1);
+      console.log(blockID);
       document.getElementById(blockID).scrollIntoView({
                                                         behavior: 'smooth',
                                                         block: 'start',
@@ -74,3 +83,11 @@ function buttonFunction() {
   });
 
 }
+
+function downloadButtonAnimation() {
+  if (window.scrollY > downloadBttnElem.offsetTop -
+      document.documentElement.clientHeight / 2) {
+    downloadBttnElem.classList.add('downloadButtonAnim');
+  }
+}
+

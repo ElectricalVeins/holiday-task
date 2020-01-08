@@ -41,8 +41,11 @@
   font-size: 13px;
   line-height: 1.4;
   max-width: 250px;
-  animation: 1.2s ease-in-out 0s normal none running trambling-animation;
 
+}
+
+.downloadButtonAnim {
+  animation: 1.2s ease-in-out 0s normal none running trambling-animation;
 }
 
 @keyframes trambling-animation {
