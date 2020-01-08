@@ -10,16 +10,14 @@
 }
 
 .sliderImageContainer {
-  display: none;
+
   width: auto;
   @media screen and(min-width: $lg) {
     width: 50%;
   }
 }
 
-.activeSlide {
-  display: block;
-}
+
 
 .sliderInfoContainer {
   width: auto;
@@ -32,16 +30,23 @@
   }
 }
 
+.opacityTransition {
+  opacity: 1 !important;
+}
+
 #sliderImage {
   height: 100%;
   width: 100%;
   object-fit: cover;
+  opacity: 0.5;
+  transition: all ease-in-out .5s;
 
 }
 
 .text {
   color: #fff;
-
+  opacity: 0.5;
+  transition: all ease-in-out .5s;
 }
 
 .textMain {
