@@ -14,7 +14,7 @@ import './assets/scss/styles.scss';
 async function loadJson (url, options) {
   try {
     const response = await fetch(url, options);
-    return response.json();
+    return await response.json();
   } catch (e) {
     console.error(e);
   }

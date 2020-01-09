@@ -1,49 +1,62 @@
 'use strict';
-fetch('./data/employees.json')
-    .then(response => response.json())
-    .then(teamListCreator)
-    .catch(console.error);
+fetch('./data/employees.json').then(response => response.json()).then(
+  teamListCreator).catch(console.error);
 
-function teamListCreator(array) {
+function teamListCreator (array) {
   const teamContainer = document.getElementById('teamContainer');
-  for (let i = 0; i < array.length; i++) {
-    teamContainer.appendChild(EmployeeElemCreator(array[i]));
+  for (let item of array) {
+    teamContainer.appendChild(EmployeeElemCreator(item));
   }
 }
 
-function EmployeeElemCreator(teamItem) {
+function EmployeeElemCreator (teamItem) {
   const employeeElem = document.createElement('div');
   employeeElem.classList.add('employee');
 
-  const employeeInfo = document.createElement('div');
-  employeeInfo.classList.add('growFixParent');
-
-  const employeePhoto = new Image;
-  employeePhoto.src = teamItem.profilePicture;
-
-  employeeInfo.appendChild(employeePhoto);
-  const employeeName = document.createElement('h4');
-  employeeName.innerHTML = teamItem.name;
-  employeeInfo.appendChild(employeeName);
-
-  const employeeJob = document.createElement('h5');
-  employeeJob.innerHTML = teamItem.position;
-  employeeInfo.appendChild(employeeJob);
-
-  const employeeDescription = document.createElement('p');
-  employeeDescription.innerHTML = teamItem.profileInfo;
-  employeeInfo.appendChild(employeeDescription);
-
-  employeeElem.appendChild(employeeInfo);
-
-  const employeeLinks = document.createElement('div');
-  employeeLinks.classList.add('growFixChild');
-
-  employeeLinks.appendChild(linkListCreator(teamItem.contacts));
-  employeeElem.appendChild(employeeLinks);
+  employeeElem.appendChild(createEmployeeContent(teamItem));
+  employeeElem.appendChild(linkListCreator(teamItem));
 
   return employeeElem;
+}
 
+function createEmployeeContent (teamItem) {
+  const employeeInfo = document.createElement('div');
+  employeeInfo.classList.add('growFixParent');
+  employeeInfo.appendChild(createImageElem(teamItem));
+  employeeInfo.appendChild(createEmployeeNameElem(teamItem));
+  employeeInfo.appendChild(createEmployeePositionElem(teamItem));
+  employeeInfo.appendChild(createEmployeeDescriptionElem(teamItem));
+
+  return employeeInfo;
+}
+
+function createEmployeePositionElem ({ position }) {
+  const employeeJob = document.createElement('h5');
+  employeeJob.innerHTML = position || '';
+
+  return employeeJob;
+}
+
+function createEmployeeDescriptionElem ({ profileInfo }) {
+  const employeeDescription = document.createElement('p');
+  employeeDescription.innerHTML = profileInfo || '';
+
+  return employeeDescription;
+}
+
+function createEmployeeNameElem ({ name }) {
+  const employeeName = document.createElement('h4');
+  employeeName.innerHTML = name || '';
+
+  return employeeName;
+}
+
+function createImageElem ({ profilePicture }) {
+  const employeePhoto = new Image;
+  employeePhoto.src = profilePicture;
+  //проверка IMG!
+
+  return employeePhoto;
 }
 
 
@@ -55,50 +68,11 @@ function EmployeeElemCreator(teamItem) {
 
 
 
+//использовать MAP и URL
+function linkListCreator ({ contacts }) {
+  const employeeLinks = document.createElement('div');
+  employeeLinks.classList.add('growFixChild');
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-function linkListCreator(contacts) {
   const linkList = document.createElement('ul');
   linkList.classList.add('shareLinks');
   for (let contact of contacts) {
@@ -133,6 +107,7 @@ function linkListCreator(contacts) {
     liElement.appendChild(aElement);
     linkList.appendChild(liElement);
   }
+  employeeLinks.appendChild(linkList);
 
-  return linkList;
-}*/
+  return employeeLinks;
+}
