@@ -28,26 +28,3 @@ function getSrcAttr(target) {
   return target.childNodes[3].getAttribute('src');
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

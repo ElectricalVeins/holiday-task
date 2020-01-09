@@ -46,6 +46,58 @@ function EmployeeElemCreator(teamItem) {
 
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 function linkListCreator(contacts) {
   const linkList = document.createElement('ul');
   linkList.classList.add('shareLinks');
@@ -83,4 +135,4 @@ function linkListCreator(contacts) {
   }
 
   return linkList;
-}
+}*/
