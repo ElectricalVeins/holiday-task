@@ -1,21 +1,33 @@
 'use strict';
+import { loadJson } from '../../utils';
+
+loadJson('/data/slider.json')
+  .then(createSlider);
+
+
+function createSlider (slides) {
+
+  return;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const sliderImage = document.getElementById('sliderImage');
 // const dots = document.getElementsByClassName('dot');
 const dots = document.querySelectorAll('#slider>div>div>div');
 const sliderInfoMain = document.getElementById('sliderInfoMain');
 const sliderInfoQuote = document.getElementById('sliderInfoQuote');
-
-const infoQuote = [
-  'SUSAN SIMS, INTERACTION DESIGNER AT XYZ',
-  'SUSAN SIMS, INTERACTION DESIGNER AT XYZ'];
-
-const infoMain = [
-  '"Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo quam..."',
-  '"Cras mattis consectetur purus sit amet fermentum. Donec sed odio dui. Aenean lacinia bibendum nulla sed consectetur..."'];
-
-const imageSrc = [
-  './assets/images/testimonial-1.jpg', './assets/images/testimonial-2.jpg'];
-
 let currentIndex = 0;
 let previousIndex;
 
@@ -69,6 +81,3 @@ function updateInfo(currentIndex) {
   sliderInfoMain.style.opacity = '1';
   sliderInfoQuote.style.opacity = '1';
 }
-
-
-

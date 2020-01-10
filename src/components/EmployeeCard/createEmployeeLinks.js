@@ -1,14 +1,14 @@
 'use strict';
 
 const linksMap = new Map()
-    .set('facebook.com', 'fa-facebook-f')
-    .set('twitter.com', 'fa-twitter')
-    .set('linkedin.com', 'fa-linkedin-in')
-    .set('instagram.com', 'fa-instagram')
-    .set('dribbble.com', 'fa-dribbble');
+ .set('facebook.com', 'fa-facebook-f')
+ .set('twitter.com', 'fa-twitter')
+ .set('linkedin.com', 'fa-linkedin-in')
+ .set('instagram.com', 'fa-instagram')
+ .set('dribbble.com', 'fa-dribbble');
 
 
-export default function createEmployeeLinks({contacts}) {
+export default function createEmployeeLinks ({contacts}) {
   const employeeLinks = document.createElement('div');
   employeeLinks.classList.add('growFixChild');
   employeeLinks.appendChild(createContactsLinkList(contacts));
