@@ -1,52 +1,52 @@
 [
   {
     "name": "Ruth Wood",
-    "position": "FOUNDER, CEO",
+    "position": "FOuNDER, CEO",
     "contacts": [
-      "facebook",
-      "twitter",
-      "linkedIn",
-      "google+",
-      "dribble"
+      "https://twitter.com/",
+      "https://facebook.com/",
+      "https://instagram.com/",
+      "https://linkedin.com/",
+      "https://dribbble.com/"
     ],
-    "profilePicture": "./assets/images/team-1.jpg",
-    "profileInfo": "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam quis risus eget urna mollis ornare vel eu leo."
+    "profilePicture": "./assets/images/tem-1.jpg",
+    "profileInfo": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum obcaecati perferendis qui saepe temporibus vitae!"
   },
   {
     "name": "Timothy Reed",
-    "position": "CO-FOUNDER, DEVELOPER",
+    "position": "CO-FoUNDER, DEVELoPER",
     "contacts": [
-      "facebook",
-      "twitter",
-      "linkedIn",
-      "google+",
-      "dribble"
+      "https://twitter.com/",
+      "https://facebook.com/",
+      "https://instagram.com/",
+      "https://linkedin.com/",
+      "https://dribbble.com/"
     ],
     "profilePicture": "./assets/images/team-2.jpg",
-    "profileInfo": "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam quis risus eget urna mollis ornare vel eu leo."
+    "profileInfo": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa dicta dignissimos error id minus molestiae non odio officia quod, reiciendis rerum ullam ut veniam voluptatum."
   },
   {
     "name": "Victoria Valdez",
-    "position": "UI DESIGNER",
+    "position": "UI DESiGNER",
     "contacts": [
-      "facebook",
-      "twitter",
-      "linkedIn",
-      "google+",
-      "dribble"
+      "https://twitter.com/",
+      "https://facebook.com/",
+      "https://instagram.com/",
+      "https://linkedin.com/",
+      "https://dribbble.com/"
     ],
     "profilePicture": "./assets/images/team-3.jpg",
-    "profileInfo": "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam quis risus eget urna mollis ornare vel eu leo."
+    "profileInfo": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci asperiores assumenda aut culpa doloribus earum fugiat illum laudantium nemo odio pariatur praesentium quae quia quis, reprehenderit, saepe sunt temporibus."
   },
   {
     "name": "Beverly Little",
-    "position": "DATA SCIENTIST",
+    "position": "DaTA SCIENTIST",
     "contacts": [
-      "facebook",
-      "twitter",
-      "linkedIn",
-      "google+",
-      "dribble"
+      "https://twitter.com/",
+      "https://facebook.com/",
+      "https://instagram.com/",
+      "https://linkedin.com/",
+      "https://dribbble.com/"
     ],
     "profilePicture": "./assets/images/team-4.jpg",
     "profileInfo": "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam quis risus eget urna mollis ornare vel eu leo."
