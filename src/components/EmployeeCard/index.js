@@ -9,6 +9,7 @@ export default function employeeElemCreator (employee) {
   employeeElem.appendChild(createEmployeeContent(employee));
   employeeElem.appendChild(createEmployeeLinks(employee));
 
+
   return employeeElem;
 }
 

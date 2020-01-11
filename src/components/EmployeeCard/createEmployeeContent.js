@@ -11,6 +11,7 @@ export default function createEmployeeContent(employee) {
   employeeInfo.appendChild(createText('h5', employee.position));
   employeeInfo.appendChild(createText('p', employee.profileInfo));
 
+
   return employeeInfo;
 }
 
