@@ -1,11 +1,13 @@
+
 'use strict';
 
-const burgerButton = document.getElementById('menuBtn');
+
 const headerElem = document.getElementById('headerWrapper');
 const ulElem = document.getElementById('navigationList');
 const liElem = document.querySelectorAll('body>header>nav>ul>li');
-const downloadBttnElem = document.getElementById('downloadBttn');
 
+const downloadBttnElem = document.getElementById('downloadBttn');
+const burgerButton = document.getElementById('menuBtn');
 
 burgerButton.onclick = () => {
   burgerButtonStyleChange();
@@ -67,4 +69,5 @@ function downloadButtonAnimation() {
     downloadBttnElem.classList.add('downloadButtonAnim');
   }
 }
+
 

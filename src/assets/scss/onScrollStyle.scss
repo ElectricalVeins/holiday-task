@@ -2,13 +2,12 @@
 
 .pageOnScroll {
   background-color: rgb(41, 44, 71);
-
-  nav {
-    padding: 25px 0 5px 0;
+  .navigationContainer {
     border: none;
+    padding: 15px 0;
+
     @media screen and(min-width: $lg) {
       padding: 25px 0;
     }
   }
 }
-

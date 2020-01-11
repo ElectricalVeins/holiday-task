@@ -1,47 +1,26 @@
 'use strict';
 import profilePicture from '../Picture';
+import {createText}   from '../../utils';
 
-export default function createEmployeeContent (employee) {
+export default function createEmployeeContent(employee) {
   const employeeInfo = document.createElement('div');
   employeeInfo.classList.add('growFixParent');
 
   employeeInfo.appendChild(createEmployeePicture(employee));
-  employeeInfo.appendChild(createEmployeeNameElem(employee));
-  employeeInfo.appendChild(createEmployeePositionElem(employee));
-  employeeInfo.appendChild(createEmployeeDescriptionElem(employee));
+  employeeInfo.appendChild(createText('h4', employee.name));
+  employeeInfo.appendChild(createText('h5', employee.position));
+  employeeInfo.appendChild(createText('p', employee.profileInfo));
 
   return employeeInfo;
 }
 
-function createEmployeePicture ({ profilePicture: profileImg }) {
-  const picture = profilePicture('', profileImg, 'profile picture',
+function createEmployeePicture({profilePicture: img}) {
+  const picture = profilePicture('', img, 'profile picture',
                                  '../assets/images/user.png');
 
- const pictureWrapper = document.createElement('div');
+  const pictureWrapper = document.createElement('div');
   pictureWrapper.classList.add('profilePictureWrapper');
   pictureWrapper.appendChild(picture);
 
   return pictureWrapper;
 }
-
-function createEmployeeNameElem ({ name }) {
-  const employeeName = document.createElement('h4');
-  employeeName.innerHTML = name || '';
-
-  return employeeName;
-}
-
-function createEmployeePositionElem ({ position }) {
-  const employeeJob = document.createElement('h5');
-  employeeJob.innerHTML = position || '';
-
-  return employeeJob;
-}
-
-function createEmployeeDescriptionElem ({ profileInfo }) {
-  const employeeDescription = document.createElement('p');
-  employeeDescription.innerHTML = profileInfo || '';
-
-  return employeeDescription;
-}
-

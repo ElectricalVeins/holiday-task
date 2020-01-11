@@ -1,3 +1,7 @@
+'use strict';
+
+import {text} from '@fortawesome/fontawesome';
+
 /**
  *
  * @param {string} url
@@ -14,7 +18,7 @@ export const loadJson = async (url, options = {}) => {
   }
 };
 
-//загрузка с картинками
+
 /**
  *
  * @param {string} src
@@ -25,15 +29,31 @@ export const createImage = (src, backupSrc) => {
   const img = new Image();
   img.src = src;
 
-  img.onerror = () => { //можно вынести отдельно функцию
+  img.onerror = () => {
     img.src = backupSrc;
   };
 
   return img;
 };
 
+/**
+ *
+ * @param {string} tagName
+ * @param {string} content
+ * @returns {HTMLElement}
+ */
+export const createText = (tagName, content) => {
+  const textField = document.createElement(tagName);
+  textField.innerHTML = content || '';
 
-//в месте вызова
-const myImage = createImage('sdf', 'user_icon');
-myImage.classList.add('class')
-myImage.setAttribute('alt','value')
+  return textField;
+};
+
+/**
+ *
+ * @param {Element}element
+ * @param {string}className
+ */
+export const toggleClass = (element, className) => {
+  element.classList.toggle(className);
+};

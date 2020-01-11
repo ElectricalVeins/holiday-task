@@ -2,56 +2,40 @@
 @import 'popUpNav';
 @import "burgerButtonMenu";
 
-.headerWrapper {
-  position: fixed;
-  width: 100%;
-  z-index: 900;
-
-}
-
-.contentContainer {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-  transition: padding 0.3s;
-  padding: 40px 0 20px 0;
-  width: 90%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  @media screen and(min-width: $lg) {
-    padding: 40px 0;
-    max-width: 1170px;
-    width: 90%;
-  }
-}
-
 .logoImage {
   height: 24px;
   width: 189px;
 }
 
-.navigation {
+.headerWrapper {
+  color: white;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
   line-height: 1.5;
-  color: rgba(255, 255, 255, 0.75);
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: row;
   font-size: 13px;
   font-weight: 700;
 
-  li {
-    margin-left: 40px;
-    cursor: pointer;
-  }
+}
 
-  @media screen and(max-width: $lg) {
-    display: none;
-  }
+.navigationContainer {
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
+  padding: 40px 0;
+  width: 90%;
+  max-width: 1170px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  transition: padding 0.3s;
 }
 
 .navigationBurgerButtonContainer {
+
   display: block;
   position: relative;
-  top: -10px;
   background-color: #E84545;
   border-radius: 50%;
   width: 44px;
@@ -59,8 +43,72 @@
   cursor: pointer;
   z-index: 10000;
 
-  @media screen and (min-width: $lg) {
+  @media screen and(min-width: $lg) {
     display: none;
+  }
+}
+
+.linksList {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  text-transform: uppercase;
+  @media screen and(min-width: $lg) {
+    display: flex;
+    visibility: visible;
+    opacity: 1;
+    position: relative;
+    li {
+      margin-left: 45px;
+      display: block;
+    }
+  }
+}
+
+.ulWrapper {
+  opacity: 0.9;
+  visibility: visible;
+  transition: opacity 0.5s;
+  background-color: rgba(0, 0, 0, .9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  z-index: 101;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  li {
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.75);
+    margin-bottom: 20px;
+    margin-left: 0;
+    font-weight: 700;
+    font-size: 25px;
+    text-transform: uppercase;
+  }
+
+  @media screen and(min-width: $lg) {
+    display: flex;
+    flex-direction: row;
+    min-width: auto;
+    min-height: auto;
+    background-color: rgba(255, 255, 255, 0);
+    opacity: 1;
+    position: unset;
+    li {
+      text-transform: uppercase;
+      color: white;
+      margin-bottom: 0;
+      margin-left: 45px;
+      display: inline-block;
+      line-height: 1.5;
+      font-size: 13px;
+      font-weight: 700;
+    }
   }
 }
 

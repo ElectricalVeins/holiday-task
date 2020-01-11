@@ -11,9 +11,12 @@
     <link rel="shortcut icon" href="./assets/images/favicon-32x32.png" type="image/png">
 </head>
 <body>
-<header class="headerWrapper" id="headerWrapper">
-    <nav class="contentContainer" id="headerContentContainer">
-        <a href="#banner"><img src="./assets/images/logo@2x.png" alt="Logo" class="logoImage"></a>
+
+<!--<header class="headerWrapper" id="headerWrapper">
+
+    <a href="#banner"><img src="./assets/images/logo@2x.png" alt="Logo" class="logoImage"></a>
+
+    <nav class="contentContainer"> &lt;!&ndash;id="headerContentContainer"&ndash;&gt;
         <ul class="navigation" id="navigationList">
             <li><a href="#features">features</a></li>
             <li><a href="#works">works</a></li>
@@ -29,22 +32,47 @@
             </div>
         </div>
     </nav>
+
+</header>-->
+
+
+<header class="headerWrapper" id="headerWrapper">
+    <div class="navigationContainer ">
+
+        <a href="#banner"><img src="./assets/images/logo@2x.png" alt="Logo" class="logoImage"></a>
+        <nav>
+            <ul class="linksList" id="navigationList">
+                <li><a href="#features">features</a></li>
+                <li><a href="#works">works</a></li>
+                <li><a href="#employees">our team</a></li>
+                <li><a href="#slider">testimonials</a></li>
+                <li><a href="#downloads">download</a></li>
+            </ul>
+            <div class="navigationBurgerButtonContainer" id="menuBtn">
+                <div class="menuBtn">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </div>
+        </nav>
+
+    </div>
 </header>
 
-
-<main>
-    <!---------------------BANNER------------------------------>
-    <section class="banner" id="banner">
-        <div class="container">
-            <div class="bannerInfo">
-                <h1>your favorite one page multi purpose template</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna vel
-                    scelerisque nisl consectetur et.</p>
-                <a href="#">find out more</a>
-            </div>
+<!---------------------BANNER------------------------------>
+<section class="banner" id="banner">
+    <div class="container">
+        <div class="bannerInfo">
+            <h1>your favorite one page multi purpose template</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna vel
+                scelerisque nisl consectetur et.</p>
+            <a href="#">find out more</a>
         </div>
-    </section>
-    <!------------------Features------------------------------->
+    </div>
+</section>
+<!------------------Features------------------------------->
+<main>
     <section class="features" id="features">
         <div class="container featureContainer">
             <div class="featureCard">
@@ -87,130 +115,130 @@
 
         </div>
     </section>
-    <!------------------WORKS---------------------------------->
-    <section>
-
-        <div class="modalWindowWrapper " id="modalWrapper">
-            <div class="modalWindowContainer" id="modalContainer">
-                <div class="closeButton" id="modalWindowCloseButton"></div>
-                <img src="" alt="Photo Viewer" id="imageSrc">
-            </div>
-        </div>
-
-
-        <div id="works">
-            <div class="workItem">
-                <div class="work ">
-                    <h5>Project Name</h5>
-                    <img src="./assets/images/work-1.jpg" alt="workItem1">
-                    <p>Website Design</p>
-                </div>
-            </div>
-
-
-            <div class="workItem">
-                <div class="work ">
-                    <h5>Project Name</h5>
-                    <img src="./assets/images/work-2.jpg" alt="workItem1">
-                    <p>Website Design</p>
-                </div>
-            </div>
-
-
-            <div class="workItem">
-                <div class="work ">
-                    <h5>Project Name</h5>
-                    <img src="./assets/images/work-3.jpg" alt="workItem1">
-
-                    <p>Website Design</p>
-                </div>
-            </div>
-
-
-            <div class="workItem">
-                <div class="work ">
-                    <h5>Project Name</h5>
-                    <img src="./assets/images/work-4.jpg" alt="workItem1">
-
-                    <p>Website Design</p>
-                </div>
-            </div>
-
-
-            <div class="workItem">
-                <div class="work ">
-                    <h5>Project Name</h5>
-                    <img src="./assets/images/work-5.jpg" alt="workItem1">
-
-                    <p>Website Design</p>
-                </div>
-            </div>
-
-
-            <div class="workItem">
-                <div class="work ">
-                    <h5>Project Name</h5>
-                    <img src="./assets/images/work-6.jpg" alt="workItem1">
-
-                    <p>Website Design</p>
-                </div>
-            </div>
-
-
-            <div class="workItem">
-                <div class="work ">
-                    <h5>Project Name</h5>
-                    <img src="./assets/images/work-7.jpg" alt="workItem1">
-
-                    <p>Website Design</p>
-                </div>
-            </div>
-
-
-            <div class="workItem">
-                <div class="work ">
-                    <h5>Project Name</h5>
-                    <img src="./assets/images/work-8.jpg" alt="workItem1">
-
-                    <p>Website Design</p>
-                </div>
-            </div>
-        </div>
-
-    </section>
-    <!------------------Employees---------------------------------->
-    <section class="employees" id="employees">
-        <div class="container cardsDisplacement" id="teamContainer">
-            <!--async js data load-->
-        </div>
-    </section>
-    <!------------------Slider---------------------------------->
-    <section class="slideshow-container" id="slider">
-
-
-        <div class="sliderImageContainer ">
-            <img src="./assets/images/testimonial-1.jpg" id="sliderImage" alt="testimonialsPhoto">
-        </div>
-        <div class="sliderInfoContainer">
-            <div class="text textMain" id="sliderInfoMain">"Integer posuere erat a ante venenatis dapibus posuere velit
-                aliquet. Donec sed odio dui. Aenean eu leo quam..."
-            </div>
-            <div class="text textQuote" id="sliderInfoQuote">SUSAN SIMS, INTERACTION DESIGNER AT XYZ</div>
-            <div class="dots">
-                <div class="dot activeDot"></div>
-                <div class="dot"></div>
-            </div>
-        </div>
-    </section>
-    <!------------------Download---------------------------------->
-    <section class="downloadContainer container" id="downloads">
-        <h3>Are You Ready to Start? Download Now For Free!</h3>
-        <p>Fusce dapibus, tellus ac cursus commodo</p>
-        <div class="downloadButton" id="downloadBttn">Download for free</div>
-        <!--докинуть intersection observer на анимацию-->
-    </section>
-
 </main>
+<!------------------WORKS---------------------------------->
+<section>
+
+    <div class="modalWindowWrapper " id="modalWrapper">
+        <div class="modalWindowContainer" id="modalContainer">
+            <div class="closeButton" id="modalWindowCloseButton"></div>
+            <img src="" alt="Photo Viewer" id="imageSrc">
+        </div>
+    </div>
+
+
+    <div id="works">
+        <div class="workItem">
+            <div class="work ">
+                <h5>Project Name</h5>
+                <img src="./assets/images/work-1.jpg" alt="workItem1">
+                <p>Website Design</p>
+            </div>
+        </div>
+
+
+        <div class="workItem">
+            <div class="work ">
+                <h5>Project Name</h5>
+                <img src="./assets/images/work-2.jpg" alt="workItem1">
+                <p>Website Design</p>
+            </div>
+        </div>
+
+
+        <div class="workItem">
+            <div class="work ">
+                <h5>Project Name</h5>
+                <img src="./assets/images/work-3.jpg" alt="workItem1">
+
+                <p>Website Design</p>
+            </div>
+        </div>
+
+
+        <div class="workItem">
+            <div class="work ">
+                <h5>Project Name</h5>
+                <img src="./assets/images/work-4.jpg" alt="workItem1">
+
+                <p>Website Design</p>
+            </div>
+        </div>
+
+
+        <div class="workItem">
+            <div class="work ">
+                <h5>Project Name</h5>
+                <img src="./assets/images/work-5.jpg" alt="workItem1">
+
+                <p>Website Design</p>
+            </div>
+        </div>
+
+
+        <div class="workItem">
+            <div class="work ">
+                <h5>Project Name</h5>
+                <img src="./assets/images/work-6.jpg" alt="workItem1">
+
+                <p>Website Design</p>
+            </div>
+        </div>
+
+
+        <div class="workItem">
+            <div class="work ">
+                <h5>Project Name</h5>
+                <img src="./assets/images/work-7.jpg" alt="workItem1">
+
+                <p>Website Design</p>
+            </div>
+        </div>
+
+
+        <div class="workItem">
+            <div class="work ">
+                <h5>Project Name</h5>
+                <img src="./assets/images/work-8.jpg" alt="workItem1">
+
+                <p>Website Design</p>
+            </div>
+        </div>
+    </div>
+
+</section>
+<!------------------Employees---------------------------------->
+<section class="employees" id="employees">
+    <div class="container cardsDisplacement" id="teamContainer">
+        <!--async js data load-->
+    </div>
+</section>
+<!------------------Slider---------------------------------->
+<section class="slideshow-container" id="slider">
+
+
+    <div class="sliderImageContainer ">
+        <img src="./assets/images/testimonial-1.jpg" id="sliderImage" alt="testimonialsPhoto">
+    </div>
+    <div class="sliderInfoContainer">
+        <div class="text textMain" id="sliderInfoMain">"Integer posuere erat a ante venenatis dapibus posuere velit
+            aliquet. Donec sed odio dui. Aenean eu leo quam..."
+        </div>
+        <div class="text textQuote" id="sliderInfoQuote">SUSAN SIMS, INTERACTION DESIGNER AT XYZ</div>
+        <div class="dots">
+            <div class="dot activeDot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+</section>
+<!------------------Download---------------------------------->
+<section class="downloadContainer container" id="downloads">
+    <h3>Are You Ready to Start? Download Now For Free!</h3>
+    <p>Fusce dapibus, tellus ac cursus commodo</p>
+    <div class="downloadButton" id="downloadBttn">Download for free</div>
+    <!--докинуть intersection observer на анимацию-->
+</section>
+
 <!------------------Footer---------------------------------->
 <footer id="pageFooter">
     <div class="footerTop">
