@@ -39,7 +39,9 @@
   line-height: 1.1;
 
   h4 {
-
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     font-size: 22px;
     color: #2d3033;
     margin: 20px 0 10px 0;

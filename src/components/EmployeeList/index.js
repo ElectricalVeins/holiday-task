@@ -18,3 +18,4 @@ function teamListCreator(array) {
     teamContainer.appendChild(EmployeeElemCreator(item));
   }
 }
+

@@ -7,7 +7,7 @@ export default function createEmployeeContent(employee) {
   employeeInfo.classList.add('growFixParent');
 
   employeeInfo.appendChild(createEmployeePicture(employee));
-  employeeInfo.appendChild(createText('h4', employee.name));
+  employeeInfo.appendChild(createName(employee));
   employeeInfo.appendChild(createText('h5', employee.position));
   employeeInfo.appendChild(createText('p', employee.profileInfo));
 
@@ -24,4 +24,12 @@ function createEmployeePicture({profilePicture: img}) {
   pictureWrapper.appendChild(picture);
 
   return pictureWrapper;
+}
+
+function createName({name}) {
+  const nameField = document.createElement('h4');
+  nameField.innerHTML = name || '';
+  nameField.setAttribute('title', `${name}`);
+
+  return nameField;
 }
