@@ -57,3 +57,4 @@ export const createText = (tagName, content) => {
 export const toggleClass = (element, className) => {
   element.classList.toggle(className);
 };
+
