@@ -2,7 +2,7 @@
 import './assets/css/reset.css';
 import './assets/scss/styles.scss';
 
-import './assets/js';
+import './components/DownloadButton';
 import './components/EmployeeList';
 import './components/Slider';
 import './components/ModalWindow';

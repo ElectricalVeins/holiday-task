@@ -1,6 +1,7 @@
 'use strict';
-import profilePicture from '../Picture';
-import {createText}   from '../../utils';
+import profilePicture     from '../Picture';
+import {createText}       from '../../utils';
+import {BACKUP_IMAGE_SRC} from '../../Constants';
 
 export default function createEmployeeContent(employee) {
   const employeeInfo = document.createElement('div');
@@ -16,8 +17,7 @@ export default function createEmployeeContent(employee) {
 }
 
 function createEmployeePicture({profilePicture: img}) {
-  const picture = profilePicture('', img, 'profile picture',
-                                 '../assets/images/user.png');
+  const picture = profilePicture('', img, 'profile picture', BACKUP_IMAGE_SRC);
 
   const pictureWrapper = document.createElement('div');
   pictureWrapper.classList.add('profilePictureWrapper');

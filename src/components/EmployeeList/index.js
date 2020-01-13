@@ -1,16 +1,15 @@
 'use strict';
-import {loadJson} from '../../utils';
-import EmployeeElemCreator from '../EmployeeCard';
+import {loadJson}           from '../../utils';
+import EmployeeElemCreator  from '../EmployeeCard';
+import {EMPLOYEES_JSON_SRC} from '../../Constants';
 
 //?
-const state={
-  isFetching:false,
-  employees:[],
-  error:null,
+const state = {
+  isFetching: false, employees: [], error: null,
 };
 
-loadJson('/data/employees.json')
-  .then(teamListCreator);
+loadJson(EMPLOYEES_JSON_SRC)
+    .then(teamListCreator);
 
 function teamListCreator(array) {
   const teamContainer = document.getElementById('teamContainer');
