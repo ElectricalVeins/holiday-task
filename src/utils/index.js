@@ -1,7 +1,5 @@
 'use strict';
 
-import {text} from '@fortawesome/fontawesome';
-
 /**
  *
  * @param {string} url
@@ -17,7 +15,6 @@ export const loadJson = async (url, options = {}) => {
     throw e;
   }
 };
-
 
 /**
  *

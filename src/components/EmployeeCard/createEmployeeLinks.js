@@ -1,5 +1,5 @@
 'use strict';
-import {LINKS_MAP} from '../../Constants';
+import {LINKS_MAP} from '../../constants';
 
 
 export default function createEmployeeLinks({contacts}) {

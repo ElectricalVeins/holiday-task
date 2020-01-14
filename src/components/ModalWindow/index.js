@@ -4,11 +4,6 @@ const wrapperElem = document.getElementById('modalWrapper');
 const imageElem = document.getElementById('imageSrc');
 const source = document.getElementsByClassName('workItem');
 
-wrapperElem.onclick = () => {
-  styleSwitch();
-};
-
-
 for (let elem of source) {
   elem.onclick = function(event) {
     const src = event.currentTarget.querySelector('img').src;
@@ -17,8 +12,12 @@ for (let elem of source) {
   };
 }
 
+wrapperElem.onclick = () => {
+  styleSwitch();
+};
+
 function styleSwitch() {
-  wrapperElem.classList.toggle('overlayViewWrapperOpen');
+  wrapperElem.classList.toggle('wrapperOpen');
 }
 
 

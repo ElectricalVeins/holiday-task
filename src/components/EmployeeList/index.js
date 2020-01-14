@@ -1,7 +1,7 @@
 'use strict';
 import {loadJson}           from '../../utils';
 import EmployeeElemCreator  from '../EmployeeCard';
-import {EMPLOYEES_JSON_SRC} from '../../Constants';
+import {EMPLOYEES_JSON_SRC} from '../../constants';
 
 //?
 const state = {
