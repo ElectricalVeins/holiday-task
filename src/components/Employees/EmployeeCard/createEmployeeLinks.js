@@ -1,5 +1,5 @@
 'use strict';
-import {LINKS_MAP} from '../../constants';
+import {LINKS_MAP} from '../../../constants';
 
 
 export default function createEmployeeLinks({contacts}) {
@@ -15,7 +15,7 @@ function createContactsLinkList(contacts) {
   linkList.classList.add('shareLinks');
 
   for (let contact of contacts) {
-    console.log(contact);
+
     const liElement = document.createElement('li');
     const aElement = document.createElement('a');
     const iElement = document.createElement('i');

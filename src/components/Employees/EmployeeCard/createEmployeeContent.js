@@ -1,7 +1,7 @@
 'use strict';
-import profilePicture     from '../Picture';
-import {createText}       from '../../utils';
-import {BACKUP_IMAGE_SRC} from '../../constants';
+import profilePicture     from '../../Picture';
+import {createText}       from '../../../utils';
+import {BACKUP_IMAGE_SRC} from '../../../constants';
 
 export default function createEmployeeContent(employee) {
   const employeeInfo = document.createElement('div');

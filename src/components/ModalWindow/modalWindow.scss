@@ -1,17 +1,23 @@
-@import "break-points";
+@import "../../assets/scss/break-points";
 
 .modalWindowWrapper {
-  display: none;
-  position: fixed;
-  top: 0;
+  display: block;
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+  top: -500px;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 100;
-  background: url('../images/fancybox_overlay.png');
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: opacity ease-in-out $time;
 }
 
 .wrapperOpen {
+  top: 0;
+  position: fixed;
+  z-index: 100;
+  opacity: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -44,5 +50,5 @@
   right: -18px;
   width: 36px;
   height: 36px;
-  background: url('../images/fancybox_sprite.png');
+  background: url('/assets/images/fancybox_sprite.png');
 }

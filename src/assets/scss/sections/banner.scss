@@ -1,37 +1,41 @@
-@import "break-points";
+@import "src/assets/scss/break-points";
 
 .banner {
 
-  background-image: url("../images/banner.jpg");
+  /*  background-image: url("/assets/images/banner.jpg");*/
   background-size: cover;
   background-position: center top;
   min-height: 750px;
   max-height: 750px;
 }
 
-.bannerInfo {
+.flex {
   display: flex;
-  text-align: center;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding-top: 35%;
+}
+
+.bannerInfo {
+
+  text-align: center;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
   max-width: 920px;
   color: white;
   @media screen and (min-width: $sm) {
-    padding-top: 25%;
+
     padding-left: 15px;
     padding-right: 15px;
   }
   @media screen and (min-width: $lg) {
-    padding-top: 25%;
+
     padding-left: 15px;
     padding-right: 15px;
   }
   @media screen and (min-width: 1200px) {
-    padding-top: 20%;
+
     padding-left: 15px;
     padding-right: 15px;
   }
@@ -42,16 +46,15 @@
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
     text-transform: uppercase;
-    font-size: 42px;
+    font-size: 32px;
     line-height: 1.1;
-
+    @media screen and(min-width: 480px) {
+      font-size: 42px;
+    }
     @media screen and (min-width: $md) {
-
       font-size: 65px;
     }
-    /* @media screen and (min-width: $lg) {
-       font-size: 65px;
-     }*/
+
   }
 
   p {
@@ -67,7 +70,6 @@
 
   a {
     background-color: #E84545;
-    font-family: 'Raleway', sans-serif;
     font-weight: 600;
     font-size: 13px;
     line-height: 1.4;

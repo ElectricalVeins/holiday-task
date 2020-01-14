@@ -1,9 +1,9 @@
 'use strict';
 
 export const BACKUP_IMAGE_SRC = './assets/images/user.png';
-export const SLIDER_JSON_SRC = '/data/slider.json';
+export const SLIDER_JSON_SRC = './data/slider.json';
 export const SLIDER_TIMEOUT = 5000; //ms
-export const EMPLOYEES_JSON_SRC = '/data/employees.json';
+export const EMPLOYEES_JSON_SRC = './data/employees.json';
 
 export const LINKS_MAP = new Map()
     .set('facebook.com', 'fa-facebook-f')

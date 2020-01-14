@@ -1,14 +1,14 @@
 @import 'layout';
-@import "header";
-@import "banner";
-@import "features";
-@import "works";
-@import "modalWindow";
-@import "employees";
-@import "slider";
-@import "downloads";
-@import "footer";
-@import "onScrollStyle";
+@import "src/components/Navigation/header";
+@import "sections/banner";
+@import "sections/features";
+@import "sections/works";
+@import "src/components/ModalWindow/modalWindow";
+@import "src/components/Employees/employees";
+@import "src/components/Slider/slider";
+@import "src/components/DownloadButton/download";
+@import "sections/footer";
+@import "src/components/Navigation/onScrollStyle";
 
 :root {
   scroll-behavior: smooth;
