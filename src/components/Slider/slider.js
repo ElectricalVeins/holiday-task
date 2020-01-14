@@ -4,10 +4,12 @@ import {createText}                          from '../../utils';
 import {getCiteObj, getComment, getImageUrl} from './utils.js';
 
 export class Slider {
-  constructor(slides) {
+  constructor(slides, timeConstant) {
     if (slides.length) {
       this._slides = slides;
       this._currentIndex = 0;
+      this.timeConstant = timeConstant;
+      this._timeouting = null;
       this.changeSlideCheck = this.changeSlideCheck.bind(this);
 
     } else {
@@ -15,12 +17,27 @@ export class Slider {
     }
   }
 
-  get slides() {
-    return this._slides;
+  get timeouting() {
+    return this._timeouting;
   }
 
-  get nextIndex() {
-    return this.getNextIndex(this.currentIndex, this.slides.length);
+  set timeouting(value) {
+    return this._timeouting = value;
+  }
+
+  autoSwitch(timeConstant) {
+    clearTimeout(this.timeouting);
+    this.timeouting = setTimeout(() => {
+      this.nextSlide();
+      this.timeouting = setTimeout(() => {
+        this.autoSwitch(timeConstant);
+      }, timeConstant);
+    }, timeConstant);
+  }
+
+
+  get slides() {
+    return this._slides;
   }
 
   get currentIndex() {
@@ -35,54 +52,52 @@ export class Slider {
     return (index + 1) % length;
   }
 
-  nextSlide(){
-    this.currentIndex = this.nextIndex();
-    const previousDot =document.querySelector('.activeDot').dataset.slideid; // определять следующую dot
-    console.log(previousDot);
-    const nextDot=;
-    this.changeSlide(this.currentIndex, nextDot);
+  nextSlide() {
+    this.currentIndex = this.getNextIndex(this.currentIndex,
+                                          this.slides.length);
+    const nextDot = document.querySelectorAll('.dot')[this.currentIndex];
 
+    this.changeSlide(this.currentIndex, nextDot);
   }
 
-  changeSlideCheck(event){
+  changeSlideCheck(event) {
     const slideID = event.target.dataset.slideid;
 
     if (slideID === undefined || null) {
-      return
+      return;
     } else if (slideID !== this.currentIndex) {
-      this.changeSlide(slideID,event.target);
+      this.changeSlide(slideID, event.target);
+    }
   }
-  }
 
 
-  changeSlide(slideID,clickedDot=null) {
-      this.currentIndex = slideID;
+  changeSlide(slideID, clickedDot) {
+    this.currentIndex = slideID;
 
-      const activeSlide = document.querySelector('.activeSlide');
-      const newActiveSlide = document.getElementById(
-          `slide${slideID}`);
-      const activeInfo = document.querySelector(
-          '.sliderInfoContainer .activeInfo');
-      const newActiveInfo = document.getElementById(
-          `slideInfo${slideID}`);
-      const dot = document.querySelector('.activeDot');
+    const activeSlide = document.querySelector('.activeSlide');
+    const newActiveSlide = document.getElementById(`slide${slideID}`);
+    const activeInfo = document.querySelector(
+        '.sliderInfoContainer .activeInfo');
+    const newActiveInfo = document.getElementById(`slideInfo${slideID}`);
+    const dot = document.querySelector('.activeDot');
 
-      activeSlide.classList.remove('activeSlide');
-      newActiveSlide.classList.add('activeSlide');
-      activeInfo.classList.remove('activeInfo');
-      newActiveInfo.classList.add('activeInfo');
-      dot.classList.remove('activeDot');
+    activeSlide.classList.remove('activeSlide');
+    newActiveSlide.classList.add('activeSlide');
+    activeInfo.classList.remove('activeInfo');
+    newActiveInfo.classList.add('activeInfo');
+    dot.classList.remove('activeDot');
 
-      clickedDot.classList.add('activeDot');//newActiveDot
-
+    clickedDot.classList.add('activeDot');//newActiveDot
   };
 
+  //====================================RENDER METHODS==========================
   render() {
     const sliderWrapperElem = document.createElement('div');
     sliderWrapperElem.classList.add('sliderWrapper');
     sliderWrapperElem.appendChild(this.renderImageContainer(this.slides));
     sliderWrapperElem.appendChild(this.renderInfoContainer(this.slides));
 
+    this.autoSwitch(this.timeConstant);
 
     return sliderWrapperElem;
   }
@@ -119,7 +134,6 @@ export class Slider {
     return container;
   }
 
-
   renderInfoContainer(slides) {
     const infoContainer = document.createElement('div');
     infoContainer.classList.add('sliderInfoContainer');
@@ -137,7 +151,6 @@ export class Slider {
 
     return infoContainer;
   }
-
 
   renderDotButton(index) {
     const dot = document.createElement('div');
@@ -192,4 +205,5 @@ export class Slider {
   renderQuotedInfo({name, surname, position}) {
     return createText('p', `${name} ${surname}, ${position}`);
   }
-}
+
+};

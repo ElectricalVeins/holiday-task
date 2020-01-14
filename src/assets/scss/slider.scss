@@ -63,13 +63,15 @@
 }
 
 .sliderInfoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
+  height: 300px;
   width: auto;
   @media screen and(min-width: $lg) {
+    height: auto;
     width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
   }
 
@@ -83,14 +85,11 @@
 
 
 .text {
-  color: #fff;
-  /*  overflow: hidden;
-    @media screen and(min-width: $lg) {
-      max-height: 260px;
-    }*/
 
+  color: #fff;
 }
 
+//FOR QUOTES ==========================
 .textMain::after, .textMain::before {
   position: absolute;
   font-size: 25pt;
@@ -109,24 +108,25 @@
   right: 0;
 }
 
+//=====================================
 
 .textMain {
   font: italic 26px "Cardo", 'Georgia', "Times New Roman", serif;
-  padding: 30px 5% 40px;
+  padding: 30px 5% 30px;
   @media screen and(min-width: $lg) {
     font-size: 36px;
-    padding: 2.5% 15%;
+    padding: 5% 25% 0 25%;
   }
 }
 
 .textQuote {
   font-family: 'Raleway', sans-serif;
-  padding: 2.5% 5%;
+  padding: 0 5%;
   font-size: 13px;
   font-weight: 600;
   line-height: 1.4;
   @media screen and(min-width: $lg) {
-    margin-left: 10%;
+    margin-left: 20%;
     align-self: flex-start;
   }
 }
@@ -155,5 +155,4 @@
     padding-top: 10vh;
   }
 }
-
 
