@@ -8,8 +8,8 @@ export class Slider {
     if (slides.length) {
       this._slides = slides;
       this._currentIndex = 0;
-      this.changeSlide = this.changeSlide.bind(this);
-      /*  this.autoSwitch();*/
+      this.changeSlideCheck = this.changeSlideCheck.bind(this);
+
     } else {
       throw new Error();
     }
@@ -35,23 +35,31 @@ export class Slider {
     return (index + 1) % length;
   }
 
-  /*  autoSwitch=()=> {
-   setTimeout(this.changeSlide(this.nextIndex()), 1000);
-   };*/
+  static nextSlide(nextIndex){
 
-  changeSlide(event) {
-    if (event.target.dataset.slideid === undefined || null) {
-      return;
-    } else if (event.target.dataset.slideid !== this.currentIndex) {
-      this.currentIndex = event.target.dataset.slideid;
+  }
+
+  changeSlideCheck(event){
+    const slideID = event.target.dataset.slideid;
+
+    if (slideID === undefined || null) {
+      return
+    } else if (slideID !== this.currentIndex) {
+      this.changeSlide(slideID,event.target);
+  }
+  }
+
+
+  changeSlide(slideID,clickedDot) {
+      this.currentIndex = slideID;
 
       const activeSlide = document.querySelector('.activeSlide');
       const newActiveSlide = document.getElementById(
-          `slide${event.target.dataset.slideid}`);
+          `slide${slideID}`);
       const activeInfo = document.querySelector(
           '.sliderInfoContainer .activeInfo');
       const newActiveInfo = document.getElementById(
-          `slideInfo${event.target.dataset.slideid}`);
+          `slideInfo${slideID}`);
       const dot = document.querySelector('.activeDot');
 
       activeSlide.classList.remove('activeSlide');
@@ -60,10 +68,8 @@ export class Slider {
       newActiveInfo.classList.add('activeInfo');
       dot.classList.remove('activeDot');
 
-      event.target.classList.add('activeDot');//newActiveDot
+      clickedDot.classList.add('activeDot');//newActiveDot
 
-
-    }
   };
 
   render() {
@@ -135,7 +141,7 @@ export class Slider {
       dot.classList.add('activeDot');
     }
     dot.setAttribute('data-slideid', index);
-    dot.addEventListener('click', this.changeSlide);
+    dot.addEventListener('click', this.changeSlideCheck);
     return dot;
   }
 
