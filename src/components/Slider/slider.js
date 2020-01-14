@@ -35,7 +35,12 @@ export class Slider {
     return (index + 1) % length;
   }
 
-  static nextSlide(nextIndex){
+  nextSlide(){
+    this.currentIndex = this.nextIndex();
+    const previousDot =document.querySelector('.activeDot').dataset.slideid; // определять следующую dot
+    console.log(previousDot);
+    const nextDot=;
+    this.changeSlide(this.currentIndex, nextDot);
 
   }
 
@@ -50,7 +55,7 @@ export class Slider {
   }
 
 
-  changeSlide(slideID,clickedDot) {
+  changeSlide(slideID,clickedDot=null) {
       this.currentIndex = slideID;
 
       const activeSlide = document.querySelector('.activeSlide');
