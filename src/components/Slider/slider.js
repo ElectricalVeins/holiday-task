@@ -44,7 +44,9 @@ export class Slider {
   autoSwitch(timeConstant) {
     clearTimeout(this.timeouting);
     this.timeouting = setTimeout(() => {
+
       this.nextSlide();
+      clearTimeout(this.timeouting);
       this.timeouting = setTimeout(() => {
         this.autoSwitch(timeConstant);
       }, timeConstant);
@@ -69,23 +71,29 @@ export class Slider {
     }
   }
 
+
   changeSlide(slideID, clickedDot) {
+    clearTimeout(this.timeouting);
     this.currentIndex = slideID;
 
     const activeSlide = document.querySelector('.activeSlide');
+    activeSlide.classList.remove('activeSlide');
+
     const newActiveSlide = document.getElementById(`slide${slideID}`);
+    newActiveSlide.classList.add('activeSlide');
+
     const activeInfo = document.querySelector(
         '.sliderInfoContainer .activeInfo');
-    const newActiveInfo = document.getElementById(`slideInfo${slideID}`);
-    const dot = document.querySelector('.activeDot');
-
-    activeSlide.classList.remove('activeSlide');
-    newActiveSlide.classList.add('activeSlide');
     activeInfo.classList.remove('activeInfo');
+
+    const newActiveInfo = document.getElementById(`slideInfo${slideID}`);
     newActiveInfo.classList.add('activeInfo');
+
+    const dot = document.querySelector('.activeDot');
     dot.classList.remove('activeDot');
 
     clickedDot.classList.add('activeDot');//newActiveDot
+    this.autoSwitch(this.timeConstant);
   }
 
   //====================================RENDER METHODS==========================
