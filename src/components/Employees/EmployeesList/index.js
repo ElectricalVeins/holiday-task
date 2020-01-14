@@ -3,11 +3,6 @@ import {loadJson}           from '../../../utils';
 import EmployeeElemCreator  from '../EmployeeCard';
 import {EMPLOYEES_JSON_SRC} from '../../../constants';
 
-//?
-const state = {
-  isFetching: false, employees: [], error: null,
-};
-
 loadJson(EMPLOYEES_JSON_SRC)
     .then(teamListCreator);
 
