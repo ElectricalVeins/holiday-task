@@ -4,6 +4,7 @@ import {createText}                          from '../../utils';
 import {getCiteObj, getComment, getImageUrl} from './utils.js';
 
 export class Slider {
+
   constructor(slides, timeConstant) {
     if (slides.length) {
       this._slides = slides;
@@ -11,7 +12,6 @@ export class Slider {
       this.timeConstant = timeConstant;
       this._timeouting = null;
       this.changeSlideCheck = this.changeSlideCheck.bind(this);
-
     } else {
       throw new Error();
     }
@@ -24,17 +24,6 @@ export class Slider {
   set timeouting(value) {
     return this._timeouting = value;
   }
-
-  autoSwitch(timeConstant) {
-    clearTimeout(this.timeouting);
-    this.timeouting = setTimeout(() => {
-      this.nextSlide();
-      this.timeouting = setTimeout(() => {
-        this.autoSwitch(timeConstant);
-      }, timeConstant);
-    }, timeConstant);
-  }
-
 
   get slides() {
     return this._slides;
@@ -50,6 +39,16 @@ export class Slider {
 
   getNextIndex(index, length) {
     return (index + 1) % length;
+  }
+
+  autoSwitch(timeConstant) {
+    clearTimeout(this.timeouting);
+    this.timeouting = setTimeout(() => {
+      this.nextSlide();
+      this.timeouting = setTimeout(() => {
+        this.autoSwitch(timeConstant);
+      }, timeConstant);
+    }, timeConstant);
   }
 
   nextSlide() {
@@ -70,7 +69,6 @@ export class Slider {
     }
   }
 
-
   changeSlide(slideID, clickedDot) {
     this.currentIndex = slideID;
 
@@ -88,7 +86,7 @@ export class Slider {
     dot.classList.remove('activeDot');
 
     clickedDot.classList.add('activeDot');//newActiveDot
-  };
+  }
 
   //====================================RENDER METHODS==========================
   render() {

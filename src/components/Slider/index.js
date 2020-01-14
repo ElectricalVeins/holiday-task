@@ -11,9 +11,7 @@ async function appendSlider(slideContainer, json) {
   try {
     const slides = await loadJson(json);
     const slider = new Slider(slides, SLIDER_TIMEOUT).render();
-
     slideContainer.appendChild(slider);
-
   } catch (e) {
     throw e;
   }

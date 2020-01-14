@@ -1,6 +1,7 @@
 @import "break-points";
 
 .banner {
+
   background-image: url("../images/banner.jpg");
   background-size: cover;
   background-position: center top;
@@ -13,13 +14,18 @@
   text-align: center;
   flex-direction: column;
   align-items: center;
-  padding-top: 45%;
+  padding-top: 35%;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
   max-width: 920px;
   color: white;
-  @media screen and (min-width: $md) {
+  @media screen and (min-width: $sm) {
+    padding-top: 25%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  @media screen and (min-width: $lg) {
     padding-top: 25%;
     padding-left: 15px;
     padding-right: 15px;
@@ -36,15 +42,16 @@
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
     text-transform: uppercase;
-    font-size: 32px;
+    font-size: 42px;
     line-height: 1.1;
 
     @media screen and (min-width: $md) {
-      font-size: 42px;
-    }
-    @media screen and (min-width: $lg) {
+
       font-size: 65px;
     }
+    /* @media screen and (min-width: $lg) {
+       font-size: 65px;
+     }*/
   }
 
   p {

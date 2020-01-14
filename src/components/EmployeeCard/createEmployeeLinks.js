@@ -15,12 +15,15 @@ function createContactsLinkList(contacts) {
   linkList.classList.add('shareLinks');
 
   for (let contact of contacts) {
+    console.log(contact);
     const liElement = document.createElement('li');
     const aElement = document.createElement('a');
     const iElement = document.createElement('i');
 
     iElement.classList.add('fab');
     iElement.classList.add(LINKS_MAP.get(getLinkHostname(contact)));
+
+    aElement.setAttribute('href', contact);
 
     aElement.appendChild(iElement);
     liElement.appendChild(aElement);
