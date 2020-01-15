@@ -1,7 +1,7 @@
 [
   {
     "imageUrl": "./assets/images/testimonial-1.jpg",
-    "comment": "1 Cras mattis consectetur purus sit amet fermentum.  Cras mattis consectetur purus sit amet fermentum.  Cras mattis consectetur purus sit amet fermentum.  Cras mattis consectetur purus sit amet fermentum.  Cras mattis consectetur purus sit amet fermentum.  Cras mattis consectetur purus sit amet fermentum.  Cras mattis consectetur purus sit amet fermentum.  Cras mattis consectetur purus sit amet fermentum.  Cras mattis consectetur purus sit amet fermentum.  Cras mattis consectetur purus sit amet fermentum.  Cras mattis consectetur purus sit amet fermentum.  Cras mattis consectetur purus sit amet fermentum.  Cras mattis consectetur purus sit amet fermentum.  Cras mattis consectetur purus sit amet fermentum.  Cras mattis consectetur purus sit amet fermentum. Donec sed odio dui. Aenean lacinia bibendum nulla sed consectetur...",
+    "comment": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi consectetur deserunt ducimus eos, fugit inventore...",
     "author": {
       "name": "SUSAN",
       "surname": "SIMS",
@@ -10,28 +10,10 @@
   },
   {
     "imageUrl": "./assets/images/testimonial-2.jpg",
-    "comment": "2 Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo quam...",
+    "comment": "Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo quam...",
     "author": {
       "name": "Adrianna",
       "surname": "Helbert",
-      "position": "INTERACTION DESIGNER AT XYZ"
-    }
-  },
-  {
-    "imageUrl": "./assets/images/testimonial-1.jpg",
-    "comment": "3 Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo quam...",
-    "author": {
-      "name": "SUSAN",
-      "surname": "SIMS",
-      "position": "INTERACTION DESIGNER AT XYZ"
-    }
-  },
-  {
-    "imageUrl": "./assets/images/testimonial-2.jpg",
-    "comment": "4 Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo quam...",
-    "author": {
-      "name": "SUSAN",
-      "surname": "SIMS",
       "position": "INTERACTION DESIGNER AT XYZ"
     }
   }
